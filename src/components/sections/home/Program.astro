@@ -1,0 +1,77 @@
+---
+import ProgramCard from '@/components/cards/ProgramCard.astro';
+import EmptyState from '@/components/cards/EmptyState.astro';
+import { getHomePrograms } from '@/lib/content';
+
+const programs = await getHomePrograms();
+---
+
+<section class="section program">
+  <div class="section-gap program">
+    <div class="container">
+      <div class="section-header program">
+        <div class="section-header-left">
+          <h2 heading-rebuild="" class="section-heading program">Join our upcoming family events</h2>
+        </div>
+        <div to-top-2="" class="section-header-right">
+          <p class="paragraph-regular white-200">Playful days, family mornings, and learning adventures for children and parents to enjoy together.</p>
+        </div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 84 91" fill="none" class="program-header-icon">
+          <g clip-path="url(#clip0_10184_17220)">
+            <path d="M11.4999 18.7308C10.9099 21.5108 10.5699 24.2908 9.65995 26.8808C9.29995 27.8808 7.60995 29.0508 6.60995 28.9808C5.80995 28.9308 4.92995 27.2008 4.42995 26.0608C3.42995 23.7908 2.30995 21.4808 1.86995 19.0708C0.959947 14.0908 0.189947 9.04076 -5.27157e-05 3.98076C-0.0500527 2.63076 1.93995 0.650764 3.42995 0.0307644C4.14995 -0.269236 6.59995 1.69076 7.05995 3.04076C8.79995 8.13076 10.0299 13.3908 11.4999 18.7308Z" fill="currentColor"></path>
+            <path d="M58.4998 90.7396C57.8498 90.2696 55.7998 89.5096 55.7198 88.5896C55.6098 87.1496 56.4898 84.6396 57.5498 84.2596C64.6598 81.7096 71.8798 79.4596 79.1798 77.5196C80.2598 77.2296 82.4198 78.7896 83.0898 80.0196C83.4698 80.7196 82.1298 83.3296 81.0798 83.6896C73.9298 86.1496 66.6498 88.2496 58.5098 90.7396H58.4998Z" fill="currentColor"></path>
+            <path d="M57.8599 32.9489C57.2199 35.2189 57.1899 36.1089 56.7699 36.7289C53.9099 40.8289 51.1799 45.0489 47.9199 48.8089C46.9399 49.9389 44.3199 50.2389 42.6599 49.8989C41.9899 49.7689 41.0099 46.3289 41.6499 45.3789C44.7499 40.7789 48.1399 36.3289 51.9299 32.2889C52.6999 31.4689 55.6199 32.6489 57.8599 32.9489Z" fill="currentColor"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_10184_17220">
+              <rect width="83.15" height="90.74" fill="currentColor"></rect>
+            </clipPath>
+          </defs>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 224 211" fill="none" scroll-rotate="" class="program-left-icon">
+          <path d="M70.2208 3.55532C94.8251 -6.44779 122.88 5.38952 132.883 29.9938L138.032 42.659L156.969 34.9599C181.573 24.9569 209.629 36.7931 219.632 61.3972C227.517 80.7924 221.828 102.329 207.015 115.48C218.703 122.988 223.601 138.052 217.94 151.241C212.028 165.014 196.698 171.851 182.699 167.456C180.923 184.562 170.01 200.153 152.966 207.082C128.362 217.085 100.308 205.249 90.3046 180.644L85.1573 167.984L66.2156 175.685C41.6113 185.688 13.5566 173.85 3.55344 149.246C-4.23244 130.095 1.21424 108.855 15.6133 95.6627C3.1451 88.4097 -2.2349 72.8257 3.59887 59.2348C9.73852 44.9316 26.0339 38.1111 40.4485 43.5775C42.0954 26.3168 53.0461 10.5378 70.2208 3.55532Z" fill="currentColor"></path>
+        </svg>
+      </div>
+      <div data-delay="4000" data-animation="cross" class="program-slider w-slider" data-autoplay="false" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0" data-nav-spacing="3" data-duration="500" data-infinite="true">
+        <div class="program-slide-mask w-slider-mask">
+          {(programs.length > 0 ? programs : [null]).map((program) => (
+            <div class="program-slide w-slide">
+            <div class="impact-carousel">
+              <div class="impact-ghost one">
+                <div class="impact-ghost-half left"></div>
+                <div class="impact-ghost-half"></div>
+              </div>
+              <div class="impact-ghost two">
+                <div class="impact-ghost-half left"></div>
+                <div class="impact-ghost-half"></div>
+              </div>
+              <div class="impact-ghost three">
+                <div class="impact-ghost-half left"></div>
+                <div class="impact-ghost-half"></div>
+              </div>
+              <div class="program-collection-wrap">
+                <div class="programs-list w-dyn-list">
+                  {program ? (
+                    <div role="list" class="programs-cards w-dyn-items">
+                      <ProgramCard program={program} variant="home" />
+                    </div>
+                  ) : (
+                    <EmptyState />
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+          ))}
+        </div>
+        <div class="slider-button left w-slider-arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="slider-arrow">
+            <path d="M5.498 12L18.998 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M10.998 18C10.998 18 4.99815 13.5811 4.99805 12C4.99805 10.4188 10.998 6 10.998 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg></div>
+        <div class="slider-button right w-slider-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="slider-arrow">
+            <path d="M18.502 12L5.00195 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M13.002 18C13.002 18 19.0019 13.5811 19.002 12C19.002 10.4188 13.002 6 13.002 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg></div>
+        <div class="hide w-slider-nav w-round w-num"></div>
+      </div>
+    </div>
+  </div>
+</section>

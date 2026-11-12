@@ -1,0 +1,35 @@
+{
+  "site": {
+    "title": "MindBlossom",
+    "base_url": "https://mindblossom-astro-theme.vercel.app",
+    "trailing_slash": false,
+    "logo": "/images/Frame-265.webp",
+    "logo_srcset": "/images/1e45e74577492db0eca172f8577c3f1c_Frame-265-p-500.png 500w, /images/Frame-265.webp 1185w",
+    "logo_alt": "MindBlossom logo"
+  },
+  "metadata": {
+    "meta_title": "MindBlossom - Astro daycare and preschool theme",
+    "meta_description": "MindBlossom is an Astro theme for daycares, preschools and childcare centers, with care programs, family events, parent resources and a Strapi CMS.",
+    "meta_image": "/images/open-graph-image-1200x630-4.webp",
+    "meta_author": "Ink Studio"
+  },
+  "announcement": {
+    "label": "Enrollment Open 2026",
+    "text": "Limited spots for infants and toddlers this season — book a tour and meet our team",
+    "button": {
+      "label": "Book a tour",
+      "link": "/contact-us"
+    }
+  },
+  "footer": {
+    "newsletter_title": "Stay close to the fun",
+    "newsletter_note": "One friendly email a month. Events, tips, and little moments.",
+    "copyright": "MindBlossom Daycare. All rights reserved."
+  },
+  "contact": {
+    "privacy_policy_url": "#"
+  },
+  "collections": {
+    "programs_per_page": 6
+  }
+}

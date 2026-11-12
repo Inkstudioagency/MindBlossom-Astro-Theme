@@ -1,0 +1,37 @@
+---
+/** Compact program card of the "More Events" list on a program page */
+import PrimaryButton from '@/components/ui/PrimaryButton.astro';
+import EventMeta from '@/components/ui/EventMeta.astro';
+import { dateBadge, type Program } from '@/lib/content';
+
+interface Props {
+  program: Program;
+}
+
+const { program } = Astro.props;
+const href = `/programs/${program.slug}`;
+const { day, month } = dateBadge(program.date);
+---
+
+<div to-top-2="" role="listitem" class="work-detail-card w-dyn-item">
+  <a href={href} class="work-detail-card-media program-detail-card-media w-inline-block"><img src={program.image.url} loading="lazy" alt={program.image.alt} class="work-detail-card-image" />
+    <div class="impact-date-badge program-detail-badge">
+      <div class="font-large">{day}</div>
+      <div class="program-detail-month">{month}</div>
+    </div>
+  </a>
+  <div class="work-detail-card-body program-detail-card-body">
+    <div class="impact-tag program-detail-tag">
+      <div class="font-extra-small work-detail-tag-text">{program.tag}</div>
+    </div>
+    <div class="work-detail-card-head">
+      <div class="font-large contact-title program-detail-card-name">{program.name}</div>
+      <EventMeta time={program.time} location={program.location} />
+    </div>
+    <div aria-hidden="true" class="program-detail-card-line"></div>
+    <div class="impact-card-footer program-detail-footer">
+      <p class="paragraph-regular stories program-detail-spots">{program.availability}</p>
+      <PrimaryButton href={href} label="View Details" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,155 @@
+---
+/**
+ * Site header: announcement bar, navigation (dropdowns, mega menu with video) and mobile menu.
+ * Markup, classes and data attributes follow the template so webflow.js (public/js) keeps
+ * driving the dropdowns, the mobile menu and the interactions.
+ */
+import config from '@/config/config.json';
+import { currentLink } from '@/lib/webflow';
+
+interface Props {
+  /** "v2" (light, used on most pages) or "base" (transparent, over a hero image or video) */
+  variant?: 'v2' | 'base';
+  /** Webflow component instance id of the navbar on this page (the interactions target it) */
+  instance: string;
+}
+
+const { variant = 'v2', instance } = Astro.props;
+const { site, announcement } = config;
+const NAVBAR_V2 = '923cd88a-a517-b334-be39-55edc44459ee';
+const variantState = variant === 'v2' ? NAVBAR_V2 : 'base';
+const variantClass = variant === 'v2' ? ` w-variant-${NAVBAR_V2}` : '';
+const target = (component: string, element: string) => JSON.stringify([[[component, element], [instance]]]);
+const link = (href: string, className: string) => currentLink(href, Astro.url.pathname, className);
+---
+
+<div data-wf--navbar--variant={variant} data-wf-component-id="3c0ba350-4b9b-768d-3888-b4fbe366daea" data-wf-variant-state={variantState} class="nav-wrapper">
+  <div class="nav-top">
+    <div class="nav-top-item-wrap nav-top-center">
+      <div class="nav-top-text deep-saffron">{announcement.label}</div>
+      <div class="nav-devider-dot nav-top-dot"></div>
+      <div class="nav-top-text">{announcement.text}</div>
+      <div class="nav-devider-dot nav-top-dot"></div>
+      <a {...link(announcement.button.link, 'nav-top-button w-inline-block')}>
+        <div>{announcement.button.label}</div><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="nav-button-top-arrow">
+          <path d="M2.91699 7H11.0837M7.58366 10.5L11.0837 7L7.58366 3.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class={`navbar${variantClass} w-nav`}>
+    <div class="container nav-container w-container">
+      <div class={`nav-item-wrap${variantClass} nav-item-anchor`}>
+        <a {...link('/', 'w-nav-brand')}><img sizes="(max-width: 767px) 98vw, (max-width: 991px) 95vw, 940px" srcset={site.logo_srcset} alt={site.logo_alt} src={site.logo} loading="lazy" class="brand-logo nav-logo"></a>
+        <nav role="navigation" class={`nav-menu${variantClass} w-nav-menu`}>
+          <div class="navlink-wrap nav-link-list">
+            <div data-hover="true" data-delay="0" data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '32de9acf-f476-65a2-04e6-2a45db52eed4')} class="nav-dropdown w-dropdown">
+              <div class="navllink nav-dropdown-toggle w-dropdown-toggle">
+                <div class="nav-dropdown-text">About</div><svg data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '7118b7b4-22ef-9d25-4bce-a705daf70072')} aria-hidden="true" fill="none" viewBox="0 0 20 20" width="100%" xmlns="http://www.w3.org/2000/svg" class="nav-dropdown-icon">
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.25" stroke="currentColor" d="M15 7.5C15 7.5 11.3176 12.5 10 12.5C8.68233 12.5 5 7.5 5 7.5"></path>
+                </svg>
+              </div>
+              <nav data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '32de9acf-f476-65a2-04e6-2a45db52eed9')} class="nav-dropdown-list w-dropdown-list">
+                <div class={`nav-dropdown-box${variantClass}`}>
+                  <a data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '32de9acf-f476-65a2-04e6-2a45db52eeda')} {...link('/about', 'navllink nav-dropdown-link w-dropdown-link')}>Welcome To MindBlossom</a>
+                  <a data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '32de9acf-f476-65a2-04e6-2a45db52eedc')} {...link('/daily-routine', 'navllink nav-dropdown-link w-dropdown-link')}>Daily Routine</a>
+                </div>
+              </nav>
+            </div>
+            <a {...link('/work', 'navllink nav-menu-link w-nav-link')}>Our Work</a>
+            <a {...link('/programs', 'navllink nav-menu-link w-nav-link')}>Programs</a>
+            <div data-hover="true" data-delay="0" data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '15290587-e94a-1f3b-4eb5-b4e44137bf90')} class="nav-dropdown w-dropdown">
+              <div class="navllink nav-dropdown-toggle w-dropdown-toggle">
+                <div class="nav-dropdown-text">Parents</div><svg data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', 'd00eda9f-f0aa-2100-8ecb-8dd1ac597ac1')} aria-hidden="true" fill="none" viewBox="0 0 20 20" width="100%" xmlns="http://www.w3.org/2000/svg" class="nav-dropdown-icon">
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.25" stroke="currentColor" d="M15 7.5C15 7.5 11.3176 12.5 10 12.5C8.68233 12.5 5 7.5 5 7.5"></path>
+                </svg>
+              </div>
+              <nav data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '15290587-e94a-1f3b-4eb5-b4e44137bf95')} class="nav-dropdown-list w-dropdown-list">
+                <div class={`nav-dropdown-box${variantClass}`}>
+                  <a data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '15290587-e94a-1f3b-4eb5-b4e44137bf96')} {...link('/contact-us', 'navllink nav-dropdown-link w-dropdown-link')}>Enrollment</a>
+                  <a data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '15290587-e94a-1f3b-4eb5-b4e44137bf98')} {...link('/documents', 'navllink nav-dropdown-link w-dropdown-link')}>Document</a>
+                  <a data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '15290587-e94a-1f3b-4eb5-b4e44137bf9a')} {...link('/the-first-day-guide', 'navllink nav-dropdown-link w-dropdown-link')}>The First Day Guide</a>
+                </div>
+              </nav>
+            </div>
+            <a {...link('/gallery', 'navllink nav-menu-link w-nav-link')}>Gallery</a>
+            <div data-hover="true" data-delay="0" class="nav-dropdown nav-dropdown-static w-dropdown">
+              <div class="navllink nav-dropdown-toggle w-dropdown-toggle">
+                <div class="nav-dropdown-text">Pages</div><svg aria-hidden="true" fill="none" viewBox="0 0 20 20" width="100%" xmlns="http://www.w3.org/2000/svg" class="nav-dropdown-icon">
+                  <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.25" stroke="currentColor" d="M15 7.5C15 7.5 11.3176 12.5 10 12.5C8.68233 12.5 5 7.5 5 7.5"></path>
+                </svg>
+              </div>
+              <nav class={`nav-dropdown-list nav-mega-list${variantClass} w-dropdown-list`}>
+                <div class={`nav-dropdown-box${variantClass} nav-mega-box`}>
+                  <div class="nav-mega-inner">
+                    <div class="nav-mega-content">
+                      <div class="nav-mega-columns">
+                        <div data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '37b7d4e5-6cf7-3024-fa97-2e863cda45c8')} class="nav-mega-column">
+                          <a {...link('/', 'navllink nav-mega-link')}>Home</a>
+                          <a {...link('/work', 'navllink nav-mega-link')}>Our Work</a>
+                          <a {...link('/programs', 'navllink nav-mega-link')}>Programs</a>
+                          <a {...link('/gallery', 'navllink nav-mega-link')}>Gallery</a>
+                        </div>
+                        <div data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '37b7d4e5-6cf7-3024-fa97-2e863cda45cf')} class="nav-mega-column">
+                          <div class="nav-mega-label">About Us</div>
+                          <a {...link('/about', 'navllink nav-mega-link')}>Welcome To MindBlossom</a>
+                          <a {...link('/contact-us', 'navllink nav-mega-link')}>Contact Us</a>
+                        </div>
+                        <div data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '37b7d4e5-6cf7-3024-fa97-2e863cda45d8')} class="nav-mega-column">
+                          <div class="nav-mega-label">For Parents</div>
+                          <a {...link('/documents', 'navllink nav-mega-link')}>Document</a>
+                          <a {...link('/the-first-day-guide', 'navllink nav-mega-link')}>The First Day Guide</a>
+                          <a {...link('/daily-routine', 'navllink nav-mega-link')}>Daily Routine</a>
+                        </div>
+                      </div>
+                      <div data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '37b7d4e5-6cf7-3024-fa97-2e863cda45da')} class="nav-mega-divider"></div>
+                      <div data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '37b7d4e5-6cf7-3024-fa97-2e863cda45e4')} class="nav-mega-column">
+                        <div class="nav-mega-label">Utility Pages</div>
+                        <div class="nav-mega-utility">
+                          <a {...link('/style-guide', 'navllink nav-mega-link')}>Style Guide</a>
+                          <a {...link('/404', 'navllink nav-mega-link')}>404</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-wf-target={target('3c0ba350-4b9b-768d-3888-b4fbe366daea', '37b7d4e5-6cf7-3024-fa97-2e863cda45eb')} class="nav-mega-media">
+                      <div data-poster-url="/videos/8160255-uhd_3840_2160_25fps.mp4-1_poster.0000000.jpg" data-video-urls="/videos/8160255-uhd_3840_2160_25fps.mp4-1_mp4.mp4,/videos/8160255-uhd_3840_2160_25fps.mp4-1_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="nav-video w-background-video w-background-video-atom"><video id="f11e111c-9e74-fa51-7e47-087356645715-video" autoplay="" loop="" style="background-image:url(&quot;/videos/8160255-uhd_3840_2160_25fps.mp4-1_poster.0000000.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+                          <source src="/videos/8160255-uhd_3840_2160_25fps.mp4-1_mp4.mp4" data-wf-ignore="true">
+                          <source src="/videos/8160255-uhd_3840_2160_25fps.mp4-1_webm.webm" data-wf-ignore="true">
+                        </video><noscript><img data-wf-bgvideo-fallback-img="true" src="/videos/8160255-uhd_3840_2160_25fps.mp4-1_poster.0000000.jpg" alt="">
+                        </noscript>
+                        <div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="f11e111c-9e74-fa51-7e47-087356645715-video" class="w-backgroundvideo-backgroundvideoplaypausebutton nav-mega-play w-background-video--control"><span class="play-pouse-state"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="play-pouse-icon">
+                                <path d="M4 7C4 5.58579 4 4.87868 4.43934 4.43934C4.87868 4 5.58579 4 7 4C8.41421 4 9.12132 4 9.56066 4.43934C10 4.87868 10 5.58579 10 7V17C10 18.4142 10 19.1213 9.56066 19.5607C9.12132 20 8.41421 20 7 20C5.58579 20 4.87868 20 4.43934 19.5607C4 19.1213 4 18.4142 4 17V7Z" stroke="currentColor" stroke-width="1.5"></path>
+                                <path d="M14 7C14 5.58579 14 4.87868 14.4393 4.43934C14.8787 4 15.5858 4 17 4C18.4142 4 19.1213 4 19.5607 4.43934C20 4.87868 20 5.58579 20 7V17C20 18.4142 20 19.1213 19.5607 19.5607C19.1213 20 18.4142 20 17 20C15.5858 20 14.8787 20 14.4393 19.5607C14 19.1213 14 18.4142 14 17V7Z" stroke="currentColor" stroke-width="1.5"></path>
+                              </svg></span><span hidden="" class="play-pouse-state"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 17" fill="none" class="play-pouse-icon play">
+                                <path d="M14.6406 9.096C14.2871 10.439 12.6167 11.388 9.2757 13.2861C6.046 15.1209 4.4312 16.0384 3.12983 15.6696C2.5918 15.5171 2.10159 15.2276 1.70624 14.8287C0.75 13.8639 0.75 11.9926 0.75 8.25C0.75 4.5074 0.75 2.6361 1.70624 1.67132C2.10159 1.27245 2.5918 0.98288 3.12983 0.83042C4.4312 0.46165 6.046 1.37907 9.2757 3.21393C12.6167 5.11197 14.2871 6.061 14.6406 7.404C14.7865 7.9584 14.7865 8.5416 14.6406 9.096Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+                              </svg></span></button></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </nav>
+        <div class="nav-button-wrap nav-actions">
+          <a data-wf--primary-two--variant="base" data-wf-component-id="fe6f4be6-50ca-05e1-38e9-9a6e9da8d773" data-wf-variant-state="base" {...link('/contact-us', 'primary-button-two w-inline-block')}>
+            <div class="button-text-wrap">
+              <div class="button-link-text is-one">Contact Us</div>
+              <div class="button-link-text is-two">Contact Us</div>
+            </div>
+            <div class="button-arrow-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 16" fill="none" class="button-arrow">
+                <path d="M6.00033 4.43483C6.00033 4.43483 10.6259 4.07304 11.2773 4.72437C11.9286 5.37577 11.5667 10.0013 11.5667 10.0013M11.0003 5.0013L4.33366 11.668" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 16" fill="none" class="button-arrow">
+                <path d="M6.00033 4.43483C6.00033 4.43483 10.6259 4.07304 11.2773 4.72437C11.9286 5.37577 11.5667 10.0013 11.5667 10.0013M11.0003 5.0013L4.33366 11.668" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg></div>
+          </a>
+        </div>
+        <div class="nav-menu-button w-nav-button">
+          <div class="nav-menu-icon-wrap"><svg aria-hidden="true" fill="none" viewBox="0 0 20 20" width="100%" xmlns="http://www.w3.org/2000/svg" class="nav-menu-icon">
+              <path stroke-linecap="round" stroke-width="1.5" stroke="currentColor" d="M3.333 5.833h13.334M3.333 10h13.334M3.333 14.167h13.334"></path>
+            </svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

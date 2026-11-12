@@ -1,0 +1,31 @@
+---
+/** Compact work card of the "Read More" list on a work page */
+import PrimaryButton from '@/components/ui/PrimaryButton.astro';
+import type { Work } from '@/lib/content';
+
+interface Props {
+  work: Work;
+}
+
+const { work } = Astro.props;
+const href = `/work/${work.slug}`;
+---
+
+<div to-top-2="" role="listitem" class="work-detail-card w-dyn-item">
+  <a href={href} class="work-detail-card-media w-inline-block"><img src={work.image.url} loading="lazy" alt={work.image.alt} class="work-detail-card-image" /></a>
+  <div class="work-detail-card-body">
+    <div class="work-detail-card-info">
+      <div class="work-detail-card-head">
+        <div class="work-detail-card-row">
+          <div class="font-large contact-title work-detail-card-title">{work.name}</div>
+          <div class="impact-tag work-detail-tag">
+            <div class="font-extra-small work-detail-tag-text">{work.category}</div>
+          </div>
+        </div>
+        <div class="work-card-countries">{work.tagline}</div>
+      </div>
+      <p class="paragraph-regular work-card-text">{work.shortDescription}</p>
+    </div>
+    <PrimaryButton href={href} label="Learn More" />
+  </div>
+</div>

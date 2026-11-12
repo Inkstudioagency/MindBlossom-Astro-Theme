@@ -1,0 +1,16 @@
+---
+/**
+ * Strapi Blocks rich text, rendered with Webflow's rich text markup (`.w-richtext`)
+ * so the template styles apply unchanged. See src/lib/blocks.ts.
+ */
+import { renderBlocks, type RenderOptions } from '@/lib/blocks';
+
+interface Props extends RenderOptions {
+  blocks: unknown[];
+  class: string;
+}
+
+const { blocks, class: className, imageAlign } = Astro.props;
+---
+
+<div to-top-0="" class={`${className} w-richtext`} set:html={renderBlocks(blocks, { imageAlign })} />

@@ -1,0 +1,28 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Hero from '@/components/sections/work-detail/Hero.astro';
+import More from '@/components/sections/work-detail/More.astro';
+import config from '@/config/config.json';
+import { getWorks } from '@/lib/content';
+
+export async function getStaticPaths() {
+  const works = await getWorks();
+  return works.map((work) => ({ params: { slug: work.slug }, props: { work } }));
+}
+
+const { work } = Astro.props;
+---
+
+<BaseLayout
+  wfPage="6acfa7b7c0cf1a7e9f5af957"
+  title={work.seo.metaTitle ?? `${work.name} | ${config.site.title}`}
+  description={work.seo.metaDescription ?? work.shortDescription}
+  image={work.image.url}
+>
+  <Header variant="v2" instance="7ad8e5c8-4026-1f45-f418-d16fd31e0a8f" />
+  <div class="main">
+    <Hero work={work} />
+    <More slug={work.slug} />
+  </div>
+</BaseLayout>

@@ -1,0 +1,33 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Hero from '@/components/sections/program-detail/Hero.astro';
+import Body from '@/components/sections/program-detail/Body.astro';
+import More from '@/components/sections/program-detail/More.astro';
+import config from '@/config/config.json';
+import { getPrograms } from '@/lib/content';
+
+export async function getStaticPaths() {
+  const programs = await getPrograms();
+  return programs.map((program) => ({ params: { slug: program.slug }, props: { program } }));
+}
+
+const { program } = Astro.props;
+---
+
+<BaseLayout
+  wfPage="6acfe24ca1d63e5669f2df32"
+  title={program.seo.metaTitle ?? `${program.name} | ${config.site.title}`}
+  description={program.seo.metaDescription ?? `${program.name} at ${program.location}, ${program.time}.`}
+  image={program.image.url}
+>
+  <div class="main">
+    <div class="home-hero-wrap program-detail-hero"><img src={program.image.url} loading="lazy" alt={program.image.alt} class="program-detail-hero-image" />
+      <div aria-hidden="true" class="program-detail-hero-overlay"></div>
+      <Header variant="base" instance="aa608dfb-ae1b-6aca-e384-90b03bac66fe" />
+      <Hero program={program} />
+    </div>
+    <Body program={program} />
+    <More slug={program.slug} />
+  </div>
+</BaseLayout>

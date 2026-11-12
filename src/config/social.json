@@ -1,0 +1,8 @@
+{
+  "main": [
+    { "name": "Facebook", "icon": "facebook", "link": "https://www.facebook.com/" },
+    { "name": "Instagram", "icon": "instagram", "link": "https://www.instagram.com/" },
+    { "name": "LinkedIn", "icon": "linkedin", "link": "https://www.linkedin.com/" },
+    { "name": "X", "icon": "x", "link": "https://x.com/" }
+  ]
+}

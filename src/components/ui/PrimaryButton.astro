@@ -1,0 +1,31 @@
+---
+/**
+ * Primary button with the rolling label and arrow hover animation.
+ * The data-wf-component-id ties it to its hover interaction in public/js/webflow.js.
+ */
+import { currentLink } from '@/lib/webflow';
+
+interface Props {
+  href: string;
+  label: string;
+  /** data-wf-target of a button that has its own scroll interaction */
+  wfTarget?: string;
+}
+
+const { href, label, wfTarget } = Astro.props;
+const link = currentLink(href, Astro.url.pathname, 'primary-button w-inline-block');
+---
+
+<a data-wf-target={wfTarget} data-wf-component-id="a82a3925-8b01-f451-2737-5d7ad6d95f75" data-wf-variant-state="base" {...link}>
+  <div class="button-text-wrap">
+    <div class="button-link-text is-one">{label}</div>
+    <div class="button-link-text is-two">{label}</div>
+  </div>
+  <div class="primary-button-arrow-wrap">
+    <div class="button-arrow-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 20 20" fill="none" class="primary-button-arrow">
+        <path d="M7.49968 5.54452C7.49968 5.54452 13.2816 5.09227 14.0958 5.90644C14.9101 6.72069 14.4577 12.5026 14.4577 12.5026M13.7497 6.2526L5.41634 14.5859" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 20 20" fill="none" class="primary-button-arrow">
+        <path d="M7.49968 5.54452C7.49968 5.54452 13.2816 5.09227 14.0958 5.90644C14.9101 6.72069 14.4577 12.5026 14.4577 12.5026M13.7497 6.2526L5.41634 14.5859" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg></div>
+  </div>
+</a>

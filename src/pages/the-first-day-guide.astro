@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Hero from '@/components/sections/first-day-guide/Hero.astro';
+import FirstDay from '@/components/sections/first-day-guide/FirstDay.astro';
+---
+
+<BaseLayout
+  wfPage="6ad0a9bc43fc7d6b60d89f1c"
+  title='The First Day Guide - MindBlossom'
+  description='Prepare your child for a calm, happy first day. The MindBlossom guide covers what to bring, drop-off tips and simple house rules.'
+>
+  <Header variant="v2" instance="efc5d116-cb24-d4bc-0bf7-ec5f10ab6e1d" />
+<div class="main">
+  <Hero />
+  <FirstDay />
+</div>
+</BaseLayout>

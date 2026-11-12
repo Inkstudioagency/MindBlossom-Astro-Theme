@@ -1,0 +1,31 @@
+{
+  "footer": [
+    {
+      "title": "Core Pages",
+      "links": [
+        { "name": "About Us", "url": "/about" },
+        { "name": "Our Work", "url": "/work" },
+        { "name": "Work Details", "url": "$first-work" },
+        { "name": "Our Programs", "url": "/programs" },
+        { "name": "Programs Details", "url": "$first-program" }
+      ]
+    },
+    {
+      "title": "Other Pages",
+      "links": [
+        { "name": "Documents", "url": "/documents" },
+        { "name": "The First Day Guide", "url": "/the-first-day-guide" },
+        { "name": "Daily Routine", "url": "/daily-routine" },
+        { "name": "Gallery", "url": "/gallery" },
+        { "name": "Contact Us", "url": "/contact-us" }
+      ]
+    },
+    {
+      "title": "Utility Pages",
+      "links": [
+        { "name": "Style Guide", "url": "/style-guide" },
+        { "name": "404", "url": "/404" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_stats",
+  "info": {
+    "displayName": "Stat",
+    "icon": "chartCircle",
+    "description": "A short figure with a label, e.g. 7k / Total Children"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

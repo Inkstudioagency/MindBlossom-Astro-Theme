@@ -1,0 +1,34 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import HeroMain from '@/components/sections/home/HeroMain.astro';
+import About from '@/components/sections/home/About.astro';
+import Mission from '@/components/sections/home/Mission.astro';
+import Empowerment from '@/components/sections/home/Empowerment.astro';
+import Stories from '@/components/sections/home/Stories.astro';
+import VideoMarquee from '@/components/sections/home/VideoMarquee.astro';
+import Program from '@/components/sections/home/Program.astro';
+import Donate from '@/components/sections/home/Donate.astro';
+import Faq from '@/components/sections/shared/Faq.astro';
+---
+
+<BaseLayout wfPage="6acf08b535a28e6f018b62ec">
+  <div class="home-hero-wrap">
+  <div data-poster-url="/videos/hero-Video.mp4_poster.0000000.jpg" data-video-urls="/videos/hero-Video.mp4_mp4.mp4,/videos/hero-Video.mp4_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="home-hero-video w-background-video w-background-video-atom"><video id="f798c1ac-a673-a245-194d-df730f84982a-video" autoplay="" loop="" style="background-image:url(&quot;/videos/hero-Video.mp4_poster.0000000.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+      <source src="/videos/hero-Video.mp4_mp4.mp4" data-wf-ignore="true">
+      <source src="/videos/hero-Video.mp4_webm.webm" data-wf-ignore="true">
+    </video></div>
+  <Header variant="base" instance="3c0ba350-4b9b-768d-3888-b4fbe366dae9" />
+  <HeroMain /><img src="/images/Union-1.webp" loading="lazy" sizes="(max-width: 1919px) 100vw, 1920px" srcset="/images/Union-1-p-500.webp 500w, /images/Union-1.webp 1920w" alt="" class="home-hero-shape">
+</div>
+<div class="main">
+  <About />
+  <Mission />
+  <Empowerment />
+  <Stories />
+  <VideoMarquee />
+  <Program />
+  <Donate />
+  <Faq />
+</div>
+</BaseLayout>

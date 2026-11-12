@@ -1,0 +1,28 @@
+---
+/** Program list pages 2, 3... (page 1 is /programs) */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Hero from '@/components/sections/programs/Hero.astro';
+import List from '@/components/sections/programs/List.astro';
+import { programsPage, programsPageCount } from '@/lib/pagination';
+
+export async function getStaticPaths() {
+  const count = await programsPageCount();
+  return Array.from({ length: Math.max(count - 1, 0) }, (_, i) => ({ params: { page: String(i + 2) } }));
+}
+
+const current = Number(Astro.params.page);
+const page = await programsPage(current);
+---
+
+<BaseLayout
+  wfPage="6acfe14cdb45bb8b54374a89"
+  title={`Programs - Page ${current} - MindBlossom`}
+  description="Join our play days, art workshops, garden mornings and storytime events. MindBlossom lists every event with dates, times and places."
+>
+  <Header variant="v2" instance="53b12cfb-d721-9c62-e77f-062b11dc1847" />
+  <div class="main">
+    <Hero />
+    <List page={page} />
+  </div>
+</BaseLayout>

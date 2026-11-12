@@ -1,0 +1,90 @@
+---
+/**
+ * Program (family event) card: /programs list ("list") and the home page slider ("home").
+ */
+import PrimaryButton from '@/components/ui/PrimaryButton.astro';
+import EventMeta from '@/components/ui/EventMeta.astro';
+import { dateBadge, type Program } from '@/lib/content';
+
+interface Props {
+  program: Program;
+  variant?: 'list' | 'home';
+}
+
+const { program, variant = 'list' } = Astro.props;
+const href = `/programs/${program.slug}`;
+const { day, month } = dateBadge(program.date);
+const isHome = variant === 'home';
+---
+
+{isHome ? (
+  <div role="listitem" class="w-dyn-item">
+    <div class="impact-card">
+      <a href={href} class="program-image-link w-inline-block">
+        <div class="program-image-wrap"><img src={program.image.url} loading="lazy" alt={program.image.alt} class="impact-card-image" /></div>
+        <div class="impact-date-badge">
+          <div class="font-large white">{day}</div>
+          <div class="font-extra-small white bold">{month}</div>
+        </div>
+      </a>
+      <div class="impact-card-body">
+        <div class="impact-divider"></div>
+        <div class="program-card-top">
+          <div class="impact-tag">
+            <div class="font-extra-small">{program.tag}</div>
+          </div>
+          <div class="impact-card-info">
+            <div class="font-large impact">{program.name}</div>
+            <EventMeta time={program.time} location={program.location} />
+          </div>
+        </div>
+        <div class="impact-card-footer">
+          <p class="paragraph-regular stories">{program.availability}</p>
+          <div class="program-button-wrap">
+            <a href={href} class="blog-button w-inline-block">
+              <div class="blog-button-item home-hero">
+                <div>View Details</div>
+              </div>
+              <div class="button-animated-line"></div>
+            </a>
+            <PrimaryButton href="/contact-us" label="Register Now" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+) : (
+  <div to-top-2="" role="listitem" class="impact-card programs-card w-dyn-item">
+    <div class="impact-card-media v1">
+      <a href={href} class="program-card-image-wrap w-inline-block"><img src={program.image.url} loading="lazy" alt={program.image.alt} class="impact-card-image" /></a>
+      <div class="impact-date-badge">
+        <div class="font-large white">{day}</div>
+        <div class="font-extra-small white bold">{month}</div>
+      </div>
+    </div>
+    <div class="impact-card-body v2">
+      <div class="impact-divider"></div>
+      <div class="program-card-top">
+        <div class="impact-tag">
+          <div class="font-extra-small">{program.tag}</div>
+        </div>
+        <div class="impact-card-info">
+          <div class="font-large impact programs-card-title">{program.name}</div>
+          <EventMeta time={program.time} location={program.location} />
+        </div>
+      </div>
+      <div class="impact-card-footer">
+        <p class="paragraph-regular stories">{program.availability}</p>
+        <div class="program-button-wrap">
+          <a href={href} class="blog-button w-inline-block">
+            <div class="blog-button-item home-hero">
+              <div>View Details</div>
+            </div>
+            <div class="button-animated-line"></div>
+          </a>
+          <PrimaryButton href="/contact-us" label="Register Now" />
+        </div>
+      </div>
+    </div>
+  </div>
+)}

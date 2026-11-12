@@ -1,0 +1,104 @@
+---
+import PrimaryButton from '@/components/ui/PrimaryButton.astro';
+/**
+ * Site footer: call-to-action with background video, newsletter form, link columns,
+ * copyright and social links. Link columns come from src/config/menu.json, social links
+ * from src/config/social.json and texts from src/config/config.json.
+ */
+import config from '@/config/config.json';
+import menu from '@/config/menu.json';
+import social from '@/config/social.json';
+import SocialIcon from '@/components/ui/SocialIcon.astro';
+import { currentLink } from '@/lib/webflow';
+import { getPrograms, getWorks } from '@/lib/content';
+
+interface Props {
+  /** Webflow page id of the current page (the newsletter form references it) */
+  wfPage: string;
+}
+
+const { wfPage } = Astro.props;
+const { footer } = config;
+const link = (href: string, className: string) => currentLink(href, Astro.url.pathname, className);
+
+// "$first-work" / "$first-program" in menu.json link to the first CMS entry of each collection
+const [firstWork] = await getWorks();
+const [firstProgram] = await getPrograms();
+const dynamicLinks: Record<string, string | undefined> = {
+  '$first-work': firstWork && `/work/${firstWork.slug}`,
+  '$first-program': firstProgram && `/programs/${firstProgram.slug}`,
+};
+const columns = menu.footer.map((column) => ({
+  ...column,
+  links: column.links
+    .map((item) => ({ ...item, url: item.url.startsWith('$') ? dynamicLinks[item.url] : item.url }))
+    .filter((item): item is { name: string; url: string } => Boolean(item.url)),
+}));
+const year = new Date().getFullYear();
+---
+
+<footer class="footer-block">
+  <section class="cta-section">
+    <div data-poster-url="/videos/8160137-uhd_3840_2160_25fps.mp4-2-1_poster.0000000.jpg" data-video-urls="/videos/8160137-uhd_3840_2160_25fps.mp4-2-1_mp4.mp4,/videos/8160137-uhd_3840_2160_25fps.mp4-2-1_webm.webm" data-autoplay="true" data-loop="true" data-wf-ignore="true" class="cta-media w-background-video w-background-video-atom"><video id="20827733-fb92-b805-3c19-aa6e7b0557b9-video" autoplay="" loop="" style="background-image:url(&quot;/videos/8160137-uhd_3840_2160_25fps.mp4-2-1_poster.0000000.jpg&quot;)" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+        <source src="/videos/8160137-uhd_3840_2160_25fps.mp4-2-1_mp4.mp4" data-wf-ignore="true">
+        <source src="/videos/8160137-uhd_3840_2160_25fps.mp4-2-1_webm.webm" data-wf-ignore="true">
+      </video>
+      <div class="cta-overlay"></div><noscript><img data-wf-bgvideo-fallback-img="true" src="/videos/8160137-uhd_3840_2160_25fps.mp4-2-1_poster.0000000.jpg" alt="">
+      </noscript>
+      <div aria-live="polite"><button type="button" data-w-bg-video-control="true" aria-controls="20827733-fb92-b805-3c19-aa6e7b0557b9-video" class="w-backgroundvideo-backgroundvideoplaypausebutton cta-bg-button w-background-video--control"><span class="play-pouse-state"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="play-pouse-icon">
+              <path d="M4 7C4 5.58579 4 4.87868 4.43934 4.43934C4.87868 4 5.58579 4 7 4C8.41421 4 9.12132 4 9.56066 4.43934C10 4.87868 10 5.58579 10 7V17C10 18.4142 10 19.1213 9.56066 19.5607C9.12132 20 8.41421 20 7 20C5.58579 20 4.87868 20 4.43934 19.5607C4 19.1213 4 18.4142 4 17V7Z" stroke="currentColor" stroke-width="1.5"></path>
+              <path d="M14 7C14 5.58579 14 4.87868 14.4393 4.43934C14.8787 4 15.5858 4 17 4C18.4142 4 19.1213 4 19.5607 4.43934C20 4.87868 20 5.58579 20 7V17C20 18.4142 20 19.1213 19.5607 19.5607C19.1213 20 18.4142 20 17 20C15.5858 20 14.8787 20 14.4393 19.5607C14 19.1213 14 18.4142 14 17V7Z" stroke="currentColor" stroke-width="1.5"></path>
+            </svg></span><span hidden="" class="play-pouse-state"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 17" fill="none" class="play-pouse-icon play">
+              <path d="M14.6406 9.096C14.2871 10.439 12.6167 11.388 9.2757 13.2861C6.046 15.1209 4.4312 16.0384 3.12983 15.6696C2.5918 15.5171 2.10159 15.2276 1.70624 14.8287C0.75 13.8639 0.75 11.9926 0.75 8.25C0.75 4.5074 0.75 2.6361 1.70624 1.67132C2.10159 1.27245 2.5918 0.98288 3.12983 0.83042C4.4312 0.46165 6.046 1.37907 9.2757 3.21393C12.6167 5.11197 14.2871 6.061 14.6406 7.404C14.7865 7.9584 14.7865 8.5416 14.6406 9.096Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
+            </svg></span></button></div>
+    </div>
+    <div class="cta-text">
+      <h2 heading-rebuild="" class="section-heading cta">A happy place to play, learn and grow.</h2>
+      <p to-top-2="" class="paragraph-regular cta">Book a visit and see a day in the life at MindBlossom.</p>
+    </div>
+    <div to-top-4="" class="hero-button-wrap cta">
+      <PrimaryButton href="/contact-us" label="Register Now" />
+    </div>
+  </section>
+  <div class="footer-wrap">
+    <div to-top-0="" class="footer-card">
+      <div class="footer-top">
+        <div class="footer-newsletter">
+          <div class="mission-feature-title">{footer.newsletter_title}</div>
+          <div class="footer-form-block w-form">
+            <form id="footer-newsletter" name="wf-form-Footer-Newsletter" data-name="Footer Newsletter" method="get" class="footer-form" data-wf-page-id={wfPage} data-wf-element-id="b00b9b3b-69ae-38b1-906c-117cb5ffc295">
+              <div class="footer-field"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 20 20" fill="none" aria-hidden="true" class="footer-field-icon">
+                  <path d="M1.66699 5L7.42784 8.26414C9.55166 9.4675 10.449 9.4675 12.5728 8.26414L18.3337 5" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"></path>
+                  <path d="M1.68013 11.2271C1.73461 13.7817 1.76185 15.059 2.70446 16.0052C3.64706 16.9514 4.95893 16.9843 7.58268 17.0502C9.19974 17.0909 10.8009 17.0909 12.418 17.0502C15.0417 16.9843 16.3536 16.9514 17.2962 16.0052C18.2388 15.059 18.2661 13.7817 18.3205 11.2271C18.3381 10.4056 18.3381 9.58915 18.3205 8.76773C18.2661 6.21311 18.2388 4.93581 17.2962 3.98961C16.3536 3.04342 15.0417 3.01046 12.418 2.94454C10.8009 2.90391 9.19974 2.90391 7.58268 2.94453C4.95893 3.01045 3.64706 3.04341 2.70445 3.98961C1.76184 4.9358 1.73461 6.2131 1.68013 8.76773C1.66261 9.58915 1.66262 10.4056 1.68013 11.2271Z" stroke="currentColor" stroke-width="1.25" stroke-linejoin="round"></path>
+                </svg><input class="footer-input w-input" maxlength="256" name="email" data-name="Email" aria-label="Email address" placeholder="you@email.com" type="email" id="footer-email" required=""></div><input type="submit" data-wait="Please wait..." class="footer-submit w-button" value="Subscribe">
+            </form>
+            <div class="success-message w-form-done">
+              <div>Thank you! Your submission has been received!</div>
+            </div>
+            <div class="error-message w-form-fail">
+              <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+          </div>
+          <p class="paragraph-regular footer">{footer.newsletter_note}</p>
+        </div>
+        <div class="footer-columns">
+          {columns.map((column) => (
+            <div class="footer-column">
+              <div class="font-small footer">{column.title}</div>
+              {column.links.map((item) => <a {...link(item.url, 'footer-link')}>{item.name}</a>)}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="footer-rule"></div>
+      <div class="footer-bottom">
+        <p class="paragraph-regular footer">© {year} {footer.copyright}</p>
+        <div class="footer-social">
+          {social.main.map((item) => (
+            <a href={item.link} target="_blank" rel="noopener noreferrer" aria-label={item.name} class="footer-social-link w-inline-block"><SocialIcon name={item.icon} /></a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

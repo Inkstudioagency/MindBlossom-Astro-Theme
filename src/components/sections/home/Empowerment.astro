@@ -1,0 +1,50 @@
+---
+import WorkCard from '@/components/cards/WorkCard.astro';
+import EmptyState from '@/components/cards/EmptyState.astro';
+import { getHomeWorks } from '@/lib/content';
+
+const works = await getHomeWorks();
+---
+
+<section class="section empowerment">
+  <div class="section-gap">
+    <div class="container">
+      <div class="section-header">
+        <div class="header-item-wrap">
+          <div class="max-width-60">
+            <h2 heading-rebuild="" class="section-heading center">Little Moments, Big Discoveries</h2>
+          </div>
+          <div to-top-2="" class="max-width-42">
+            <p class="paragraph-regular center">From first smiles to new friendships, we nurture every child through care, connection, and play.</p>
+          </div><img src="/images/Union-7.webp" loading="lazy" scroll-rotate="" alt="Abstract yellow shape with four rounded lobes on a transparent background." class="empowerment-shape"><img src="/images/Layer_1.webp" loading="lazy" alt="Minimalist black hand making the OK gesture with three small brown rounded shapes around it on a white background." class="empowerment-shape right">
+        </div>
+      </div>
+      <div data-delay="100" data-animation="slide" class="empowerment-slider w-slider" data-autoplay="true" to-top-4="" data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="1" data-nav-spacing="3" data-duration="500" data-infinite="true">
+        <div class="empowerment-slider-mask w-slider-mask">
+          {(works.length > 0 ? works : [null]).map((work) => (
+            <div class="empowerment-slide w-slide">
+              <div class="work-list w-dyn-list">
+                {work ? (
+                  <div role="list" class="work-cards w-dyn-items">
+                    <WorkCard work={work} variant="home" />
+                  </div>
+                ) : (
+                  <EmptyState />
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="slider-button left w-slider-arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="slider-arrow">
+            <path d="M5.498 12L18.998 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M10.998 18C10.998 18 4.99815 13.5811 4.99805 12C4.99805 10.4188 10.998 6 10.998 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg></div>
+        <div class="slider-button right w-slider-arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none" class="slider-arrow">
+            <path d="M18.502 12L5.00195 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M13.002 18C13.002 18 19.0019 13.5811 19.002 12C19.002 10.4188 13.002 6 13.002 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg></div>
+        <div class="hide w-slider-nav w-round w-num"></div>
+      </div>
+    </div>
+  </div>
+</section>

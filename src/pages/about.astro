@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Hero from '@/components/sections/about/Hero.astro';
+import Belief from '@/components/sections/about/Belief.astro';
+import Quote from '@/components/sections/about/Quote.astro';
+import Statement from '@/components/sections/about/Statement.astro';
+import Team from '@/components/sections/about/Team.astro';
+import Faq from '@/components/sections/shared/Faq.astro';
+---
+
+<BaseLayout
+  wfPage="6acf933ec7bbf78a16f1fa68"
+  title='About - MindBlossom'
+  description='Meet the educators, values and story behind our daycare. MindBlossom shares our approach, key numbers and the team.'
+>
+  <Header variant="v2" instance="85157dbd-bdde-50b2-464a-7c6fa1a796e2" />
+<div class="main">
+  <Hero />
+  <Belief />
+  <Quote />
+  <Statement />
+  <Team />
+  <Faq />
+</div>
+</BaseLayout>

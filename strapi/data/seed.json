@@ -1,0 +1,1397 @@
+{
+  "$comment": "Demo content for the MindBlossom theme, imported by `npm run seed` and used by the Astro site when STRAPI_URL is not set. Entries are listed oldest first; the site shows the newest first. Image keys point to files in data/uploads.",
+  "media": {
+    "work-preschool-play": {
+      "file": "work-preschool-play.webp",
+      "alt": "Preschool Play",
+      "width": 1170,
+      "height": 1047
+    },
+    "work-infant-care": {
+      "file": "work-infant-care.webp",
+      "alt": "Infant Care",
+      "width": 2216,
+      "height": 1904
+    },
+    "work-toddler-discovery": {
+      "file": "work-toddler-discovery.webp",
+      "alt": "Toddler Discovery",
+      "width": 1662,
+      "height": 1428
+    },
+    "work-family-circle": {
+      "file": "work-family-circle.webp",
+      "alt": "Family Circle",
+      "width": 1662,
+      "height": 1428
+    },
+    "work-outdoor-explorers": {
+      "file": "work-outdoor-explorers.webp",
+      "alt": "Outdoor Explorers",
+      "width": 1662,
+      "height": 1428
+    },
+    "work-early-learning": {
+      "file": "work-early-learning.webp",
+      "alt": "Early Learning",
+      "width": 1662,
+      "height": 1428
+    },
+    "program-family-storytime": {
+      "file": "program-family-storytime.webp",
+      "alt": "Family Storytime",
+      "width": 1560,
+      "height": 1396
+    },
+    "program-balloon": {
+      "file": "program-balloon.png",
+      "alt": "Child playing with a balloon at a MindBlossom community event",
+      "width": 780,
+      "height": 472
+    },
+    "program-map-1": {
+      "file": "program-map-1.png",
+      "alt": "Map showing the MindBlossom Daycare location",
+      "width": 780,
+      "height": 279
+    },
+    "program-sensory-garden-play": {
+      "file": "program-sensory-garden-play.webp",
+      "alt": "Sensory Garden Play",
+      "width": 1560,
+      "height": 1396
+    },
+    "program-map-2": {
+      "file": "program-map-2.png",
+      "alt": "Map showing the MindBlossom Daycare location",
+      "width": 780,
+      "height": 280
+    },
+    "program-little-artists-workshop": {
+      "file": "program-little-artists-workshop.webp",
+      "alt": "Little Artists Workshop",
+      "width": 1560,
+      "height": 1396
+    },
+    "program-bubble-play-day": {
+      "file": "program-bubble-play-day.webp",
+      "alt": "Bubble Play Day",
+      "width": 1560,
+      "height": 1396
+    }
+  },
+  "works": [
+    {
+      "name": "Preschool Play",
+      "slug": "preschool-play",
+      "image": "work-preschool-play",
+      "tagline": "Imagine · Create · Discover",
+      "shortDescription": "Creative activities and playful discovery build confidence, friendships, and a love of learning.",
+      "category": "Early Learning",
+      "focus": "Build · Wonder · Play",
+      "programLead": "James Achieng",
+      "stats": [
+        {
+          "value": "Make",
+          "label": "Creative play"
+        },
+        {
+          "value": "Learn",
+          "label": "Curious minds"
+        },
+        {
+          "value": "9k",
+          "label": "Total Children"
+        }
+      ],
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "A world of imagination"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Preschoolers are full of questions, stories, and big ideas. Our Preschool Play program turns that energy into learning, with creative projects, pretend play, and small group activities that help children grow in confidence and friendship."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Creating, building, and discovering"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Painting, building, music, and simple science experiments let children test ideas and express themselves. Educators gently introduce early letters, numbers, and problem solving through play, so learning always feels fun and meaningful."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“When children create freely, they discover just how capable they are.”\n"
+            },
+            {
+              "type": "text",
+              "text": "— Our approach to preschool learning",
+              "italic": true
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Partnering with families"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "We share what your child is exploring each week and invite you to join special days, art displays, and small celebrations. Your ideas and stories from home help us shape activities your child will love."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Preschool Play | MindBlossom",
+        "metaDescription": "Creative activities and playful discovery help preschoolers build confidence, make friends and grow a lifelong love of learning before school starts."
+      }
+    },
+    {
+      "name": "Infant Care",
+      "slug": "infant-care",
+      "image": "work-infant-care",
+      "tagline": "Comfort · Connection · Care",
+      "shortDescription": "Gentle care, sensory play, and comforting routines help little ones feel secure as they explore.",
+      "category": "Gentle Care",
+      "focus": "Nurture · Play · Grow",
+      "programLead": "Kwame Mensah",
+      "stats": [
+        {
+          "value": "Care",
+          "label": "Gentle routines"
+        },
+        {
+          "value": "Rest",
+          "label": "Quiet moments"
+        },
+        {
+          "value": "15k",
+          "label": "Total Children"
+        }
+      ],
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "A gentle beginning"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Starting daycare is a big step for babies and their families. Our Infant Care program offers a warm, welcoming space where little ones can build trusting connections, explore at their own pace, and feel comforted through each new experience."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Care that follows your child"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Feeding, rest, and play follow your baby’s individual rhythm. Gentle songs, tummy time, simple stories, and sensory experiences invite discovery, while comforting routines make space for both quiet moments and growing curiosity."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“Little moments of care build the confidence to explore a whole new world.”\n"
+            },
+            {
+              "type": "text",
+              "text": "— Our approach to infant care",
+              "italic": true
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Partnering with families"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "You know your baby best. Share their routines, comfort cues, feeding preferences, and any support needs with our team. Together, we can plan a gentle transition and stay connected as your little one settles in, discovers new things, and grows."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Infant Care | MindBlossom",
+        "metaDescription": "Gentle care, sensory play and comforting routines help infants feel safe, rested and secure as they begin to explore the world around them each day."
+      }
+    },
+    {
+      "name": "Toddler Discovery",
+      "slug": "toddler-discovery",
+      "image": "work-toddler-discovery",
+      "tagline": "Explore · Express · Connect",
+      "shortDescription": "Hands-on play, stories, and shared adventures nurture curiosity and growing independence.",
+      "category": "Learn Through Play",
+      "focus": "Move · Talk · Share",
+      "programLead": "Grace Uwase",
+      "stats": [
+        {
+          "value": "Play",
+          "label": "Hands-on fun"
+        },
+        {
+          "value": "Share",
+          "label": "New friendships"
+        },
+        {
+          "value": "5k",
+          "label": "Total Children"
+        }
+      ],
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Big steps, small explorers"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Toddlers are busy discovering what their bodies, words, and ideas can do. Our Toddler Discovery program gives them a safe, cheerful space to climb, build, chatter, and try new things, with caring educators close by to guide and encourage every step."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Learning through hands-on play"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Stacking blocks, splashing at the water table, simple songs, and picture books turn everyday play into learning. Short group times help toddlers take turns and share, while plenty of free play lets them follow their own curiosity."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“Every ‘I did it!’ is a little moment of confidence that lasts a lifetime.”\n"
+            },
+            {
+              "type": "text",
+              "text": "— Our approach to toddler care",
+              "italic": true
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Growing together with families"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "We share daily notes, photos, and small milestones so you always know how your toddler’s day went. Tell us about new words, sleep changes, or favourite games at home, and we’ll build on them together in the classroom."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Toddler Discovery | MindBlossom",
+        "metaDescription": "Hands-on play, stories and shared adventures help toddlers explore, express themselves and grow more independent in a warm, caring daycare setting."
+      }
+    },
+    {
+      "name": "Family Circle",
+      "slug": "family-circle",
+      "image": "work-family-circle",
+      "tagline": "Share · Support · Belong",
+      "shortDescription": "Family mornings, parent workshops, and shared celebrations connect home and classroom.",
+      "category": "Family Support",
+      "focus": "Meet · Talk · Grow",
+      "programLead": "Priya Sharma",
+      "stats": [
+        {
+          "value": "Meet",
+          "label": "Family mornings"
+        },
+        {
+          "value": "Learn",
+          "label": "Parent workshops"
+        },
+        {
+          "value": "4k",
+          "label": "Total Families"
+        }
+      ],
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Families at the heart of daycare"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Children thrive when home and daycare work together. Our Family Circle program brings parents, grandparents, and caregivers into daycare life, with regular moments to meet, share, and celebrate your child’s growth."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Mornings, workshops, and celebrations"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Family mornings let you join your child’s favourite activities, while friendly parent workshops cover sleep, eating, behaviour, and getting ready for school. Seasonal celebrations bring every family together to share food, songs, and stories."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“When families feel welcome, children feel at home.”\n"
+            },
+            {
+              "type": "text",
+              "text": "— Our approach to family partnership",
+              "italic": true
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Staying connected"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Simple updates, open conversations, and a team that listens help every family feel part of our community. Share your ideas, questions, or traditions with us, and we’ll make space for them in daycare life."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Family Circle | MindBlossom",
+        "metaDescription": "Family mornings, parent workshops and shared celebrations bring parents into daycare life and keep home and classroom connected all year round."
+      }
+    },
+    {
+      "name": "Outdoor Explorers",
+      "slug": "outdoor-explorers",
+      "image": "work-outdoor-explorers",
+      "tagline": "Move · Notice · Breathe",
+      "shortDescription": "Garden time, nature walks, and open-air games build healthy bodies and curious minds.",
+      "category": "Outdoor Play",
+      "focus": "Run · Dig · Explore",
+      "programLead": "Rahim Uddin",
+      "stats": [
+        {
+          "value": "Move",
+          "label": "Active play"
+        },
+        {
+          "value": "Notice",
+          "label": "Nature walks"
+        },
+        {
+          "value": "6k",
+          "label": "Total Children"
+        }
+      ],
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Learning in the fresh air"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Some of the best learning happens outside. Our Outdoor Explorers program gives children daily time in the garden and on nature walks, where they can run, dig, climb, and discover the world around them in every season."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Moving, noticing, and breathing"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Planting seeds, searching for bugs, splashing in puddles, and open-air games build strong bodies and curious minds. Children learn to notice changes in weather, plants, and wildlife, and to care for the space they share."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“A muddy pair of boots is often the sign of a very good day.”\n"
+            },
+            {
+              "type": "text",
+              "text": "— Our approach to outdoor play",
+              "italic": true
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Safe adventures for every child"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Our outdoor spaces are checked daily, and educators adapt each activity to your child’s age and comfort. Pack weather-ready clothes, and we’ll share photos and stories from every new outdoor discovery."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Outdoor Explorers | MindBlossom",
+        "metaDescription": "Garden time, nature walks and open-air games help children stay active, notice the world around them and build healthy bodies and curious minds."
+      }
+    },
+    {
+      "name": "Early Learning",
+      "slug": "early-learning",
+      "image": "work-early-learning",
+      "tagline": "Read · Count · Grow",
+      "shortDescription": "Early literacy, number games, and guided play prepare children for a confident start at school.",
+      "category": "School Ready",
+      "focus": "Listen · Think · Try",
+      "programLead": "Anil Thapa",
+      "stats": [
+        {
+          "value": "Read",
+          "label": "Story time"
+        },
+        {
+          "value": "Count",
+          "label": "Number games"
+        },
+        {
+          "value": "7k",
+          "label": "Total Children"
+        }
+      ],
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Getting ready for school"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "The year before school is full of excitement and new skills. Our Early Learning program helps children feel ready and confident, with playful routines that build early reading, counting, and the independence they’ll need for their first classroom."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Stories, numbers, and guided play"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Daily story time, letter and sound games, counting activities, and simple puzzles build strong foundations. Children practise listening, following instructions, and working in small groups, all through activities that keep learning joyful."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“A confident start at school begins with a love of learning at daycare.”\n"
+            },
+            {
+              "type": "text",
+              "text": "— Our approach to early learning",
+              "italic": true
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Supporting the next step"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "We keep you updated on your child’s progress and share simple ideas to try at home. As the school year approaches, we help children talk about the change, visit new routines, and look forward to the adventure ahead."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Early Learning | MindBlossom",
+        "metaDescription": "Early literacy, number games and guided play give children the skills and confidence they need for a happy, settled start at school and beyond."
+      }
+    }
+  ],
+  "programs": [
+    {
+      "name": "Family Storytime",
+      "slug": "family-storytime",
+      "image": "program-family-storytime",
+      "tag": "Family Event",
+      "date": "2026-12-10",
+      "time": "9:00 AM – 5:00 PM",
+      "location": "MindBlossom Daycare",
+      "availability": "Families welcome",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "About this event"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Join us for Family Storytime at MindBlossom! Children and their grown-ups can settle into cosy story circles, meet friendly puppets, and sing along to favourite rhymes. It’s a warm, gentle chance to share books together, spark imagination, and discover how much fun reading can be."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "‍"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": {
+            "$media": "program-balloon"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "schedule": [
+        {
+          "time": "9:00 AM",
+          "activity": "Welcome & book corner browsing"
+        },
+        {
+          "time": "9:30 AM",
+          "activity": "Story circle & puppet show"
+        },
+        {
+          "time": "10:30 AM",
+          "activity": "Rhymes, songs & story crafts"
+        },
+        {
+          "time": "12:00 PM",
+          "activity": "Lunch break & quiet time"
+        },
+        {
+          "time": "4:30 PM",
+          "activity": "Bedtime-story wind down & goodbyes"
+        }
+      ],
+      "details": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "What to bring"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dress your little one in comfortable clothes for sitting and moving. Pack a labeled water bottle, a favourite book or soft toy to share, and any comfort item that helps them feel at home. Cushions and blankets are provided."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Before the event, let our team know about any allergies, sensitivities, or support needs. Ask us about age suitability, what to pack, and family participation so we can help you prepare for a relaxed, happy visit."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Learning through play"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Listening to stories builds vocabulary, attention, and imagination, while songs and rhymes help children hear the sounds of language. Reading together with family shows little ones that books are a joy to share."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“One shared story can open the door to a lifelong love of reading.”"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Getting there"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "‍"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": {
+            "$media": "program-map-1"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Contact the MindBlossom team to confirm the event location, arrival instructions, and parking or drop-off details before your visit."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Family Storytime | MindBlossom",
+        "metaDescription": "Cosy story circles, puppets and songs for children and parents at MindBlossom Daycare on 10 Dec 2026. Families are welcome to stay and read along."
+      }
+    },
+    {
+      "name": "Sensory Garden Play",
+      "slug": "sensory-garden-play",
+      "image": "program-sensory-garden-play",
+      "tag": "Outdoor Fun",
+      "date": "2026-12-10",
+      "time": "9:00 AM – 5:00 PM",
+      "location": "MindBlossom Daycare",
+      "availability": "Families welcome",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "About this event"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Join us for Sensory Garden Play at MindBlossom! Little ones can touch soft leaves, smell fresh herbs, dig in the sand, and splash at the water trays with their families. It’s a calm, curious morning outdoors that invites children to slow down, notice, and explore with every sense."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "‍"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": {
+            "$media": "program-balloon"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "schedule": [
+        {
+          "time": "9:00 AM",
+          "activity": "Welcome & garden wander"
+        },
+        {
+          "time": "9:30 AM",
+          "activity": "Herb smelling & leaf touching trail"
+        },
+        {
+          "time": "10:30 AM",
+          "activity": "Sand digging & water tray play"
+        },
+        {
+          "time": "12:00 PM",
+          "activity": "Picnic lunch & quiet time"
+        },
+        {
+          "time": "4:30 PM",
+          "activity": "Garden songs & cheerful goodbyes"
+        }
+      ],
+      "details": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "What to bring"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dress your little one in weather-ready, washable clothes and sturdy shoes for garden play. Pack a spare outfit, a sun hat, a labeled water bottle, and any comfort item that helps them feel at home. Sand and water play can get messy!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Before the event, let our team know about any allergies, including plant or pollen sensitivities, or support needs. Ask us about age suitability, what to pack, and family participation so we can help you prepare for a relaxed, happy visit."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Learning through play"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Touching, smelling, and listening in the garden help children make sense of the world around them. Digging and pouring build coordination, while naming plants and textures grows new words and a gentle respect for nature."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“A small garden can hold a whole world of wonder for little hands.”"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Getting there"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "‍"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": {
+            "$media": "program-map-2"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Contact the MindBlossom team to confirm the event location, arrival instructions, and parking or drop-off details before your visit."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Sensory Garden Play | MindBlossom",
+        "metaDescription": "Children touch, smell and explore plants, sand and water in our sensory garden at MindBlossom Daycare on 10 Dec 2026. Families are always welcome."
+      }
+    },
+    {
+      "name": "Little Artists Workshop",
+      "slug": "little-artists-workshop",
+      "image": "program-little-artists-workshop",
+      "tag": "Art & Creativity",
+      "date": "2026-12-10",
+      "time": "9:00 AM – 5:00 PM",
+      "location": "MindBlossom Daycare",
+      "availability": "Families welcome",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "About this event"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Join us for Little Artists Workshop at MindBlossom! Children can paint, print, glue, and squish their way through colourful art stations alongside their families. It’s a happy, messy chance to explore colours and textures, try new materials, and proudly take home a masterpiece of their own."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "‍"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": {
+            "$media": "program-balloon"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "schedule": [
+        {
+          "time": "9:00 AM",
+          "activity": "Welcome & free drawing"
+        },
+        {
+          "time": "9:30 AM",
+          "activity": "Finger painting & colour mixing"
+        },
+        {
+          "time": "10:30 AM",
+          "activity": "Collage, stamps & texture play"
+        },
+        {
+          "time": "12:00 PM",
+          "activity": "Lunch break & quiet time"
+        },
+        {
+          "time": "4:30 PM",
+          "activity": "Mini art show & cheerful goodbyes"
+        }
+      ],
+      "details": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "What to bring"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dress your little one in clothes that can get messy and comfortable shoes. Pack a spare outfit, a labeled water bottle, and any comfort item that helps them feel at home. We provide aprons and all art materials."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Before the event, let our team know about any allergies, skin sensitivities, or support needs. Ask us about age suitability, what to pack, and family participation so we can help you prepare for a relaxed, happy visit."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Learning through play"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Holding brushes, tearing paper, and pressing stamps strengthen little hands for future writing, while choosing colours and shapes builds confidence and self-expression. Sharing materials and admiring each other’s work encourages kindness and conversation."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“Every splash of colour is a little idea finding its way into the world.”"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Getting there"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "‍"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": {
+            "$media": "program-map-1"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Contact the MindBlossom team to confirm the event location, arrival instructions, and parking or drop-off details before your visit."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Little Artists Workshop | MindBlossom",
+        "metaDescription": "Painting, collage and messy play let children create freely at MindBlossom Daycare on 10 Dec 2026. Families are welcome to make art together."
+      }
+    },
+    {
+      "name": "Bubble Play Day",
+      "slug": "bubble-play-day",
+      "image": "program-bubble-play-day",
+      "tag": "Play Day",
+      "date": "2026-12-10",
+      "time": "9:00 AM – 5:00 PM",
+      "location": "MindBlossom Daycare",
+      "availability": "Families welcome",
+      "content": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "About this event"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Join us for Bubble Play Day at MindBlossom! Little ones can chase floating bubbles, try different wands, and explore playful activities with their families. It’s a joyful chance to make friends, spark curiosity, and discover how much fun learning through play can be."
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "‍"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": {
+            "$media": "program-balloon"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": ""
+            }
+          ]
+        }
+      ],
+      "schedule": [
+        {
+          "time": "9:00 AM",
+          "activity": "Welcome & gentle free play"
+        },
+        {
+          "time": "9:30 AM",
+          "activity": "Bubble chasing & wand discovery"
+        },
+        {
+          "time": "10:30 AM",
+          "activity": "Bubble-inspired art & sensory play"
+        },
+        {
+          "time": "12:00 PM",
+          "activity": "Lunch break & quiet time"
+        },
+        {
+          "time": "4:30 PM",
+          "activity": "Storytime & cheerful goodbyes"
+        }
+      ],
+      "details": [
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "What to bring"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Dress your little one in comfortable, washable clothes and non-slip shoes for active play. Pack a spare outfit, a labeled water bottle, and any comfort item that helps them feel at home. Bubble play can get a little splashy!"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Before the event, let our team know about any allergies, sensitivities, or support needs. Ask us about age suitability, what to pack, and family participation so we can help you prepare for a relaxed, happy visit."
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Learning through play"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Following bubbles encourages movement and coordination, while trying different wands invites curiosity and discovery. Taking turns and sharing the fun gives children gentle opportunities to practice patience, communication, and connection."
+            }
+          ]
+        },
+        {
+          "type": "quote",
+          "children": [
+            {
+              "type": "text",
+              "text": "“Small bubbles, big discoveries — a little wonder makes room for joyful learning.”"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "level": 2,
+          "children": [
+            {
+              "type": "text",
+              "text": "Getting there"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "‍"
+            }
+          ]
+        },
+        {
+          "type": "image",
+          "image": {
+            "$media": "program-map-1"
+          },
+          "children": [
+            {
+              "type": "text",
+              "text": ""
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "text": "Contact the MindBlossom team to confirm the event location, arrival instructions, and parking or drop-off details before your visit."
+            }
+          ]
+        }
+      ],
+      "seo": {
+        "metaTitle": "Bubble Play Day | MindBlossom",
+        "metaDescription": "A joyful day of bubble games, music and outdoor play at MindBlossom Daycare on 10 Dec 2026. Families are welcome to join their little ones all day."
+      }
+    }
+  ]
+}

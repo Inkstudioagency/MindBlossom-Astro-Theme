@@ -1,0 +1,20 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Hero from '@/components/sections/work/Hero.astro';
+import List from '@/components/sections/work/List.astro';
+import Faq from '@/components/sections/shared/Faq.astro';
+---
+
+<BaseLayout
+  wfPage="6acfa62475ec569a74473c42"
+  title='Work - MindBlossom'
+  description='Explore our care programs from infant care to early learning. MindBlossom presents each program with photos and stats.'
+>
+  <Header variant="v2" instance="fcdca0a3-5369-da1d-24e2-8e444fbfa34d" />
+<div class="main">
+  <Hero />
+  <List />
+  <Faq />
+</div>
+</BaseLayout>

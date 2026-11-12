@@ -1,0 +1,53 @@
+---
+/**
+ * Work (care program) card: /work list ("list") and the home page slider ("home").
+ */
+import PrimaryButton from '@/components/ui/PrimaryButton.astro';
+import type { Work } from '@/lib/content';
+
+interface Props {
+  work: Work;
+  variant?: 'list' | 'home';
+}
+
+const { work, variant = 'list' } = Astro.props;
+const href = `/work/${work.slug}`;
+const isHome = variant === 'home';
+const Title = isHome ? 'div' : 'h3';
+const stats = work.stats.slice(0, 3);
+---
+
+<div role="listitem" class:list={[isHome ? 'work-card home' : 'work-card-main', 'w-dyn-item']}>
+  <img
+    src="/images/Isolation_Mode-16.webp"
+    loading="lazy"
+    sizes={isHome ? '(max-width: 1268px) 100vw, 1268px' : '100vw'}
+    srcset="/images/Isolation_Mode-16-p-500.png 500w, /images/Isolation_Mode-16.webp 1268w"
+    alt="Black and white abstract illustration of a person sitting at a desk, wearing headphones, working on a laptop with a cup nearby, in a relaxed posture."
+    class="work-card-brush"
+  />
+  <a href={href} class="work-card-media w-inline-block"><img src={work.image.url} loading="lazy" alt={work.image.alt} class="work-card-image" /></a>
+  <div class="work-card-body">
+    <div class="work-card-top">
+      <div class="work-card-intro">
+        <div class="work-card-heading">
+          <Title class="about-statement-card-title work-card-title">{work.name}</Title>
+          <div class="work-card-countries">{work.tagline}</div>
+        </div>
+        <p class="paragraph-regular work-card-text">{work.shortDescription}</p>
+      </div>
+      <PrimaryButton href={href} label="Learn More" />
+    </div>
+    <div class="work-card-stats">
+      {stats.map((stat, i) => (
+        <>
+          {i > 0 && <div class:list={['work-card-rule', { 'none-mobile': i === 2 }]} />}
+          <div class:list={['work-card-stat', { 'none-mobile': i === 2 }]}>
+            <div data-counter="counter" class="about-statement-card-title">{stat.value}</div>
+            <div class="paragraph-regular about-team-text">{stat.label}</div>
+          </div>
+        </>
+      ))}
+    </div>
+  </div>
+</div>

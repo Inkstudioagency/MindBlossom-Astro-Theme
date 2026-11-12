@@ -1,0 +1,22 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Hero from '@/components/sections/programs/Hero.astro';
+import List from '@/components/sections/programs/List.astro';
+import { programsPage } from '@/lib/pagination';
+
+// First page of the program list; the next pages live at /programs/page/2, /programs/page/3...
+const page = await programsPage(1);
+---
+
+<BaseLayout
+  wfPage="6acfe14cdb45bb8b54374a89"
+  title="Programs - MindBlossom"
+  description="Join our play days, art workshops, garden mornings and storytime events. MindBlossom lists every event with dates, times and places."
+>
+  <Header variant="v2" instance="53b12cfb-d721-9c62-e77f-062b11dc1847" />
+  <div class="main">
+    <Hero />
+    <List page={page} />
+  </div>
+</BaseLayout>
