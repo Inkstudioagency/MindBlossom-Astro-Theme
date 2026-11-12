@@ -29,3 +29,6 @@ pnpm-debug.log*
 
 # converter scratch output
 .convert/
+
+.vercel
+.env*
